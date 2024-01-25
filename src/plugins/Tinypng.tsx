@@ -39,23 +39,28 @@ export const TinypngDownloadProcess = (props: {
   const [loading, setLoading] = useState(false)
   const start = async () => {
     if (!file) return
-    if (!useTinypng.getState().tinypngApiKey) {
-      alert(
-        "Please input tinypng api key \n(you can get it from https://tinypng.com/developers/subscription)"
-      )
-      return
-    }
+    // if (!useTinypng.getState().tinypngApiKey) {
+    //   alert(
+    //     "Please input tinypng api key \n(you can get it from https://tinypng.com/developers/subscription)"
+    //   )
+    //   return
+    // }
     setLoading(true)
     try {
-      const raw = await file.arrayBuffer()
-      const buf = await tinypng({
-        endpoint: props.endpoint,
-        apiKey: useTinypng.getState().tinypngApiKey,
-        file: {
-          buffer: raw,
-        },
-      })
-      downloadFile(buf, file.name, file.type)
+      if (useTinypng.getState().tinypngApiKey) {
+        const raw = await file.arrayBuffer()
+        const buf = await tinypng({
+          endpoint: props.endpoint,
+          apiKey: useTinypng.getState().tinypngApiKey,
+          file: {
+            buffer: raw,
+          },
+        })
+        downloadFile(buf, file.name, file.type)
+      } else {
+        const buf = await file.arrayBuffer()
+        downloadFile(buf, file.name, file.type)
+      }
     } catch (err) {
       props.onError?.(err)
     } finally {
