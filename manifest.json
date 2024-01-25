@@ -6,5 +6,10 @@
   "ui": "ui.html",
   "capabilities": ["inspect"],
   "enableProposedApi": false,
-  "editorType": ["figma", "dev"]
+  "editorType": ["figma", "dev"],
+  "networkAccess": {
+    "allowedDomains": ["*"],
+    "reasoning": "Users can set up own endpoint to use tinypng api",
+    "devAllowedDomains": []
+  }
 }
