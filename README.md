@@ -27,4 +27,4 @@ As Tinypng doesn't support cross-origin requests, the plugin forwards Tinypng AP
 ## Data
 
 - Export settings, Tinypng API key etc. are all saved locally.
-- The endpoint is an open-source API forwarding service that does not store any data. You can fork it and configure your own endpoint.
+- The [default endpoint](https://github.com/taterboom/cors-gateway) is an open-source API forwarding service that does not store any data. You can fork it and configure your own endpoint.
