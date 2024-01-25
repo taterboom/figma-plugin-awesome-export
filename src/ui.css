@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-base-100: 255 255 255;
+    --color-base-200: 251 251 252;
+    --color-base-300: 245 246 248;
+    --color-base-400: 243 245 247;
+
+    --color-content-100: 25 27 32;
+    --color-content-200: 40 42 48;
+    --color-content-300: 60 65 73 ;
+    --color-content-400: 107 111 118;
+
+    --color-neutral-100: 237 240 243;
+    --color-neutral-200: 223 225 228;
+    --color-neutral-300: 144 149 157;
+    --color-neutral-400: 144 149 157;
+
+    --color-primary-100: 110 121 214;
+    --color-primary-200: 92 103 199;
+    --color-primary-content-100: 255 255 255;
+    --color-primary-content-200: 255 255 255;
+
+    --color-danger-100: 235 86 86;
+    --color-danger-200: 255 118 124;
+    --color-danger-content-100: 255 255 255;
+    --color-danger-content-200: 255 255 255;
+}
+
+:root {
+    --bg: rgb(233 233 233 / 0.6);
+    --bg-size: 16px;
+}
+
+body {
+    background-image: linear-gradient(45deg, var(--bg) 25%, transparent 0, transparent 75%, var(--bg) 0), linear-gradient(45deg, var(--bg) 25%, transparent 0, transparent 75%, var(--bg) 0);
+    background-position: 0 0, var(--bg-size) var(--bg-size);
+    background-size: calc(var(--bg-size) * 2) calc(var(--bg-size) * 2);
+}
+
+.common-shadow-lg {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 56px;
+}
+
+.common-shadow {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 12px;
+}
+
+.input {
+    @apply text-sm block bg-base-200 text-content-200 border border-neutral-200 rounded w-full py-0.5 px-1.5 focus:border-primary-100 focus-visible:outline-none
+}
+
+.select {
+    @apply text-sm block bg-base-200 text-content-200 border border-neutral-200 rounded w-full py-px px-1 focus:border-primary-100 focus-visible:outline-none
+}
+
+.btn {
+    @apply inline-flex justify-center items-center h-7 px-3 text-sm rounded-md bg-base-100 text-content-300 border border-neutral-200;
+    transition: all 0.15s;
+}
+.btn:hover {
+    @apply bg-base-300 text-content-100;
+}
+.btn:disabled {
+    opacity: 0.6;
+}
+.btn.btn-primary {
+    @apply bg-primary-100 text-primary-content-100 border-primary-100;
+}
+.btn.btn-primary:hover {
+    @apply bg-primary-200 text-primary-content-200 border-primary-200;
+}
+.btn.btn-danger {
+    @apply bg-danger-100 text-danger-content-100 border-danger-100;
+}
+.btn.btn-danger:hover {
+    @apply bg-danger-100 text-danger-content-100 border-danger-100;
+}
+.btn.btn-icon {
+    @apply w-6 h-6 p-0;
+}
+.btn.btn-ghost {
+    @apply bg-transparent border-transparent hover:border-neutral-200 hover:bg-base-300;
+}
+
+/* checkbox */
+
+.checkbox {
+    @apply appearance-none border-none m-0 w-[32px] h-[20px] rounded-full bg-neutral-200 relative transition-all;
+    @apply after:absolute after:w-[14px] after:h-[14px] after:left-[3px] after:top-[3px] after:rounded-full after:bg-base-100 after:transition-all
+}
+.checkbox:hover {
+    @apply bg-neutral-300;
+}
+.checkbox:checked {
+    @apply bg-primary-100;
+    @apply after:left-[15px];
+}

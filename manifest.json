@@ -1,0 +1,10 @@
+{
+  "name": "AwesomeExport",
+  "id": "1224919959068281380",
+  "api": "1.0.0",
+  "main": "main.js",
+  "ui": "ui.html",
+  "capabilities": ["inspect"],
+  "enableProposedApi": false,
+  "editorType": ["figma", "dev"]
+}
