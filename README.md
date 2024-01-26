@@ -4,6 +4,7 @@ An awesome Figma plugin for enhancing the image exporting.
 
 - 🧠 Remember the last selected export options
 - ✨ Absolute Bounds Mode
+- 🔎 Real-time display of element dimensions
 - 🐼 Support Tinypng compression
 
 ## Absolute Bounds Mode
