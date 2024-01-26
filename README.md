@@ -9,6 +9,8 @@ An awesome Figma plugin for enhancing the image exporting.
 - 🔎 Real-time display of element dimensions
 - 🐼 Support Tinypng compression
 
+You can downlod it in [Figma community](https://www.figma.com/community/plugin/1224919959068281380/awesomeexport).
+
 ## Absolute Bounds Mode
 
 Absolute Bounds Mode is different from Figma's default export method. It exports the frame containing the elements rather than the rendering box.
