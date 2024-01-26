@@ -1,3 +1,5 @@
+![](./logo.png)
+
 # AwesomeExport
 
 An awesome Figma plugin for enhancing the image exporting.
